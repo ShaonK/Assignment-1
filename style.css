@@ -1,274 +1,638 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>helloswaps</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- ============================
-             Header Section Start 
-    ============================== -->
-<Header>
-    <!-- logo -->
-    <div class="logo">
-        <img src="images/logo/Logo.svg" alt="">
-    </div>
-    <!-- navigation -->
-    <nav class="navigation">
-        <ul>
-            <a href="#"><li>buy</li></a>
-            <a href="#"><li>sell</li></a>
-            <a href="#"><li>create an offer</li></a>
-        </ul>
-    </nav>
-    <!-- login get started & icon -->
-     <div class="user_action">
-        <button class="login">login</button>
-        <button class="get_started">get started</button>
-        <a href="#">
-            <img src="images/globe/language_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="globe icon image">
-        </a>
-     </div>
-</Header>
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    /* overflow: hidden; */
+    width: 151.2rem;
+    margin: 0 auto;
+}
+
+/* ===============================
+Header Section Start
+================================= */
+
+header{
+    width: 151.2rem;
+    height: 10.5rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 2rem;
+    overflow: hidden;
 
 
 
+    & .navigation ul{
+        display: flex;
+        gap: 2.1rem;
+    
+    }
 
+    & .navigation ul li{
+        list-style: none;
+        font-weight: 500;
+    }
+    & .navigation a{
+        font-family: inter;
+        font-size: 2.2rem;
+        text-decoration: none;
+        text-transform: capitalize;
+        color: #000;
+    }
+    
+    & .user_action{
+        display: flex;
+        gap: 3.7rem;
 
-    <!-- =================================
-                Header Section End
-     ================================= -->
+        & button{
+            text-transform: capitalize;
+            background-color: #F1F1F1;
+            font-size: 2.2rem;
+            font-weight: 500;
+            padding: 1rem 3rem;
+            font-weight: 500;
+            border-style: none;
+            border-radius: 3rem;
+            cursor: pointer;
+        }
+        & button:nth-child(2){
+            text-transform: capitalize;
+            background-color: #000;
+            color: #F1F1F1;
+            font-size: 2.2rem;
+            font-weight: 500;
+            padding: 1.1rem 2.8rem;
+            border-style: none;
+            border-radius: 3rem;
+            cursor: pointer;
+        }
+        & img{
+            width: 3.6rem;
+            height: 3.6rem;
+        }
+    }
 
-<!-- =================================
-                Hero Section End
-     ================================= -->
-<section class="hero">
-    <div class="hero_image">
-        <img class="forground_image" src="images/Hero/hero_background_opacity.jpeg" alt="">
-    </div>
+    
+}
 
-        <div class="hero_content">
-            <p>Find your offer ✨</p>
-            <div class="hero_box">
-                <div class="item1">
-                    <span>Currency</span>
-                    <img src="images/dwon arrow/dwonarrow.svg" alt="">
-                </div>
-                <div class="item2">
-                    <span>Buy</span>
-                    <img src="images/dwon arrow/dwonarrow.svg" alt="">
-                </div>
-                <div class="item3">
-                    <span>Payment</span>
-                    <img src="images/dwon arrow/dwonarrow.svg" alt="">
-                </div>
-                <div class="item4">
-                    <span>Currency</span>
-                    <img src="images/dwon arrow/dwonarrow.svg" alt="">
-                </div>
-                <div class="item5">
-                    <span>How much</span>
-                </div>
-                <div class="item6">
-                    <span>Find offer</span>
-                </div>
-            </div>
-    </div>
-</section>
-<!-- =================================
-                Hero Section End
-================================= -->
+/* ===============================
+Header Section End
+================================ */
 
-<!-- =================================
-                Buy Sell Section End
-================================= -->
-<section class="buysell">
-    <p>Buy/Sell the favorites with <span>No Fees</span>*</p>
+/* ===============================
+Hero Section End
+================================ */
+.hero{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    <div class="coin_icon">
-        <img src="images/buysell/Ethereum (ETH).png" alt="coin icon">
-        <img src="images/buysell/Tether (USDT).png" alt="coin icon">
-        <img src="images/buysell/Cardano (ADA).png" alt="coin icon">
-        <img src="images/buysell/Binance Coin (BNB).png" alt="coin icon">
-        <img src="images/buysell/Polygon (MATIC).png" alt="coin icon">
-        <img src="images/buysell/Cardano (ADA).png" alt="coin icon">
-    </div>
-</section>
+    & .hero_image{
+        background-image: url(images/Hero/hero_background.jpeg);
+        width: 100%;
+        height: 76rem;
+        background-size: cover;
+        background-position: center;
+    
+            & .forground_image{
+               
+                opacity: 20%;
+                width: 151.2rem;
+                height: 76rem;
+            }
+    }
 
-<!-- =================================
-                Buy Sell Section End
-================================= -->
+    & .hero_content{
+        position: absolute;
+        background-color: #fff;
+        width: 110.6rem;
+        height: 34.4rem;
+        border: 0.1rem solid #000;
+        border-radius: 1rem;
+        z-index: 1;
 
-<!-- =================================
-                Feature Section End
-================================= -->
-<section class="feature">
-    <h3>Features: We think about you</h3>
-    <div class="feature_content">
-        <div class="item1">
-            <img src="images/feature icon/SecureEscrow.png" alt=" Secure icon">
-            <h4>Secured by Escrow</h4>
-            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
-            <a href="#"><span>Learn how our Escrow works</span></a>
-        </div>
+        & p{
+            font-family: inter;
+            text-align: center;
+            color: #000;
+            font-size: 4.5rem;
+            font-weight: 500;
+            margin-top: 3.8rem;
+            margin-bottom: 3rem;
+        }
+        & .hero_box{
+            width: 94.2rem;
+            height: 12.4rem;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            column-gap: 2.6rem;
+            row-gap: 2.6rem;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
 
-        <div class="item2"></div>
+            & .item5{
+                grid-column: 1 / span 3;
+                justify-content: center;
+            }
+            & div{
+                background-color: #ECECEC;
+                display: flex;
+                align-items: center;
+                align-content: center;
+                justify-content: space-between;
+                font-family: inter;
+                font-weight: 500;
+                font-size: 2.2rem;
+                padding: 2rem 2rem;
+                border-radius: 1rem;
+                
+            }
+            & .item6{
+                justify-content: center;
+                border-radius: 3rem;
+                background-color: #00EBC7;
+                font-weight: 600;
+            }
 
-        <div class="item3">
-            <img src="images/feature icon/NewbieFriendly.png" alt=" Secure icon">
-            <h4>Secured by Escrow</h4>
-            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
-            <a href="#"><span>Learn how our Escrow works</span></a>
-            <button>See full features</button>
-        </div>
+        }
+        
+    
+    }
+}
 
-        <div class="item4"></div>
+/* ===============================
+Hero Section End
+================================ */
 
-        <div class="item5">
-            <img src="images/feature icon/MultiplePayments.png" alt=" Secure icon">
-            <h4>Secured by Escrow</h4>
-            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
-            <a href="#"><span>Learn how our Escrow works</span></a>
-        </div>
+/* ===============================
+Buy Sell Section Start
+================================ */
 
-    </div>
+.buysell{
+    background-color: #FDE24F;
+    width: 151.2rem;
+    min-height: 37rem;
+    margin: 0 auto;
+
+    & p{
+        font-size: 3.4rem;
+        text-align: center;
+        font-family: inter;
+        font-weight: 600;
+        padding-top: 8rem;
+
+            & span{
+                font-style: italic;
+                font-weight: 400;
+            }
+        
+    }
+    & div{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        justify-content: space-around;
+        padding-top: 10.5rem;
+        padding-bottom: 15rem;
+    }
+}
+/* ===============================
+Buy Sell Section End
+================================ */
+
+/* ===============================
+Feature
+ Section Start
+================================ */
+
+.feature{
+
+    background-color: #FFFFFF;
+    width: 151.2rem;
+    height: 60.8rem;
+    margin: 0 auto;
+    border-top: 0.1rem solid #000;
+    border-bottom: 0.1rem solid #000;
+    padding: 1rem 0rem 4rem 9.5rem;
+        & h3{
+            
+            margin: 4rem 0;
+            font-weight: 500;
+            font-size: 3.4rem;
+
+        }
+
+        & .feature_content{
+            width: 118rem;
+            height: 28rem;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+
+                &  div{
+                    text-align: center;
+                    width: 30rem;
+                    height: 29.9rem;
+
+                        & img{
+                            width: 8rem;
+                            height: 8rem;
+                        }
+
+                        & h4{
+                            font-size: 2.4rem;
+                            font-family: inter;
+                            font-weight: 500;
+                            margin-bottom: 4rem;
+                        }
+                        & p{
+                            color: #535353;
+                            font-size: 2rem;
+                            font-family: inter;
+                            font-weight: 400;
+                            margin-bottom: 8rem;
+                        }
+
+                        & a{
+                            text-decoration: underline;
+                            font-size: 1.6rem;
+                            font-weight: 600;
+                            font-family: inter;
+                            color: #000;
+                            
+                        }
+                }
+
+                & .item2, .item4{
+                    margin-top: -10rem;
+                    height: 0.1rem;
+                    width: 12rem;
+                    background-color: #000;
+                }
+                & .item3 button{
+                    background-color: #fff;
+                    font-family: inter;
+                    font-weight: 500;
+                    font-size: 2.2rem;
+                    text-align: center;
+                    color: #000;
+                    padding: 1.1rem 2.8rem;
+                    border: 0.1rem solid #000;
+                    border-radius: 3rem;
+                    margin-top: 5rem;
+                    cursor: pointer;
+                } 
+                & .item3 button:hover{
+                    background-color: #000;
+                    color: #FFFFFF;
+                }
+        }
+        
+}
+
+/* ===============================
+Feature Section End
+================================ */
+
+/* ===============================
+Buy Sell box Section End
+================================ */
+.buy_sell_box{
+    background-color: #F8F8F8;
+    width: 151.2rem;
+    height: 70rem;
+    margin: 0 auto;
+    border-bottom: 0.1rem solid #000000;
+    display: flex;
+    
+        & h5{
+            font-size: 3.4rem;
+            font-weight: 500;
+            font-family: inter;
+            padding: 10rem 0rem 0.5rem 5rem;
+        }
+        & .buy_box{
+            width: 75.6rem;
+            height: inherit;
+            border-right: 0.1rem solid #000000;
+
+                & div{
+                    display: flex;
+                    justify-content: baseline;
+                    align-items: center;
+                    align-content: center;
+                    margin: 5rem;
+                    width: 62.6rem;
+                    height: 10rem;
+                    border: 0.1rem solid #000;
+                    border-radius: 1.5rem;
+
+                        & img{
+                            height: 7.4rem;
+                            width: 7.4rem;
+                            margin-left: 0.5rem;
+                        }
+                        & span{
+                            margin-left: 1.5rem;
+                            font-family: inter;
+                            font-weight: 500;
+                            font-size: 2rem;
+                        }
+                        
+                }
+                & button{
+                    text-align: center;
+                    background-color: #000;
+                    font-size: 2.2rem;
+                    font-weight: 500;
+                    font-family: inter;
+                    padding: 1.1rem 2.8rem;
+                    border-radius: 1.5rem;
+                    color: #fff;
+                    display: block;
+                    margin: 0 auto;
+                    margin-top: -2rem;
+                    cursor: pointer;
+                }
+        
+        }
+        & .sell_box{
+            width: 75.6rem;
+            height: inherit;
+            border-right: 0.1rem solid #000000;
+
+                & div{
+                    display: flex;
+                    justify-content: baseline;
+                    align-items: center;
+                    align-content: center;
+                    margin: 5rem;
+                    width: 62.6rem;
+                    height: 10rem;
+                    border: 0.1rem solid #000;
+                    border-radius: 1.5rem;
+
+                        & img{
+                            height: 7.4rem;
+                            width: 7.4rem;
+                            margin-left: 0.5rem;
+                        }
+                        & span{
+                            margin-left: 1.5rem;
+                            font-family: inter;
+                            font-weight: 500;
+                            font-size: 2rem;
+                        }
+                        
+                }
+                & button{
+                    text-align: center;
+                    background-color: #000;
+                    font-size: 2.2rem;
+                    font-weight: 500;
+                    font-family: inter;
+                    padding: 1.1rem 2.8rem;
+                    border-radius: 1.5rem;
+                    color: #fff;
+                    display: block;
+                    margin: 0 auto;
+                    margin-top: -2rem;
+                    cursor: pointer;
+                }
+        
+        }
    
-</section>
-<!-- =================================
-                Feature Section End
-================================= -->
+    }
+/* ===============================
+Buy Sell box Section End
+================================ */
 
-<!-- =================================
-                Buy Sell box Section End
-================================= -->
-<section class="buy_sell_box">
-    
-    <div class="buy_box">
-            
-        <h5>Buy</h5>
+/* ===============================
+Sign Up Section Start
+================================*/
 
-            <div>
-                <img src="images/buysellbox/1.png" alt="color image">
-                <span>Zelle, 1+</span>
-                <span>30,244.12 USD/BTC</span>
-                <span>$10-200$</span>
-            </div>
-            <div>
-                <img src="images/buysellbox/2.png" alt="color image">
-                <span>Paypal</span>
-                <span>30,244.12 USD/BTC</span>
-                <span>$5-1K$</span>
-            </div>
-            <div>
-                <img src="images/buysellbox/2.png" alt="color image">
-                <span>Wire</span>
-                <span>30,244.12 USD/BTC</span>
-                <span>$100-3K$</span>
-            </div>
-            
-        <button>View buy’s offers</button>
-    
-    </div>
+.sign_up{
+    width: 151.2rem;
+    height: 60rem;
+    margin: 0 auto;
+    background-color: #CFBAFF;
 
-    <div class="sell_box">
-        <h5>Sell</h5>
-        <div>
-            <img src="images/buysellbox/4.png" alt="color image">
-            <span>Zelle, 1+</span>
-            <span>30,244.12 USD/BTC</span>
-            <span>$10-200$</span>
-        </div>
-        <div>
-            <img src="images/buysellbox/3.png" alt="color image">
-            <span>Paypal</span>
-            <span>30,244.12 USD/BTC</span>
-            <span>$5-1K$</span>
-        </div>
-        <div>
-            <img src="images/buysellbox/1.png" alt="color image">
-            <span>Wire</span>
-            <span>30,244.12 USD/BTC</span>
-            <span>$100-3K$</span>
-        </div>
-        <button>View sell’s offers</button>
-    </div>
+        & h6{
+            font-size: 7.5rem;
+            font-weight: 500;
+            font-family: inter;
+            text-align: center;
+            padding-top: 17rem;
+            padding-bottom: 11.5rem;
+        }
+        & button{
+            font-size: 3.2rem;
+            font-weight: 500;
+            font-family: inter;
+            padding: 1.5rem 4.5rem;
+            background-color: #000;
+            border-radius: 1.5rem;
+            color: #fff;
+            display: block;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+}
 
-</section>
-<!-- =================================
-    Buy Sell box Section End
-================================= -->
+/* ===============================
+Sign Up Section End
+================================ */
+
+/* ===============================
+Footer Section Start
+================================ */
+
+.footer{
+    background-color: #000;
+    width: 151.2rem;
+    height: 60.5rem;
+    margin: 0 auto;
+
+        & .footer_link{
+            padding-top: 10.5rem;
+            display: flex;
+            justify-content: space-around;
 
 
+               & h6{
+                font-size: 2.5rem;
+                font-weight: 600;
+                font-family: inter;
+                color: #fff;
+                padding-bottom: 6rem;
 
-<!-- =================================
-    Sign Up Section Start
-================================= -->
+               } 
 
-<section class="sign_up">
-    <h6>Sign up and buy or sell crypto in 5 minutes with zero commission fees</h6>
-    <button>Get started</button>
-</section>
+               & li{
+                list-style: none;
+                margin-bottom: 1.4rem;
+               }
 
-<!-- =================================
-    Sign Up Section End
-================================= -->
+               & li a{ 
+                text-decoration: none;            
+                color: #fff;
+                font-size: 2rem;
+                font-weight: 600;
+                font-family: inter;
+            }
+        }
+        & hr{
+            margin-top: 3rem;
+            border: 0.1rem solid #fff;
+        }
 
-<!-- =================================
-    Footer Section Start
-================================= -->
+        & p{
+           padding: 2rem;
+            width: 141.7rem;
+            font-family: inter;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #fff;
+            margin: 0 auto;
+            text-align: center;
+        }
+}
 
-<footer class="footer">
+/* ===============================
+Footer Section End
+================================ */
 
-    <div class="footer_link">
-       <a href="#">
-        <img src="images/footer/spacio.png" alt="logo">
-       </a>
-        <div>
-            <h6>Product</h6>
-            <ul>
-                <li><a href="#">Sell Bitcoin</a></li>
-                <li><a href="#">Buy Bitcoin</a></li>
-                <li><a href="#">Sell Ethereum</a></li>
-                <li><a href="#">Buy Ethereum</a></li>
-                <li><a href="#">Sell Solana</a></li>
-                <li><a href="#">Buy Solana</a></li>
-                <li><a href="#">Features</a></li>
-            </ul>
-        </div>
-        <div>
-            <h6>About spacio</h6>
-            <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Fees</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Rewards Program</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
-                <li><a href="#">Features</a></li>
-            </ul>
-        </div>
-        <div>
-            <h6>Support</h6>
-            <ul>
-                <li><a href="#">Moderators</a></li>
-                <li><a href="#">Contact Support</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Help Center</a></li>
-                <li><a href="#">Comunity</a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#">Security</a></li>
-            </ul>
-        </div>
-    </div>
-<hr>
-<p>“SPACI0” is a registered trademark of Logic0x, Ltd. Copyright © 2022 Logic0x, Ltd. All Rights Reserved. Paxful Inc. has no relation to MoneyGram, Western Union, Payoneer, WorldRemit, Paxum, Paypal, Amazon, OkPay, Payza, Walmart, Reloadit, Perfect Money, WebMoney, Google Wallet, BlueBird, Serve, Square Cash, NetSpend, Chase QuickPay, Skrill, Vanilla, MyVanilla, OneVanilla, Neteller, Venmo, Apple, ChimpChange or any other payment method. We make no claims about being supported by or supporting these services. Their respective wordmarks and trademarks belong to them alone. Official mailing address: 3422 Old Capitol Trail, PMB 989, Wilmington DE 19808</p>
-</footer>
 
-<!-- =================================
-    Footer Section End
-================================= -->
 
-</body>
-</html>
+/* Responsive */
+@media (max-width: 575.98px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .navigation ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .user_action {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero_content {
+        width: 90%;
+        height: auto;
+    }
+
+    .hero_box {
+        grid-template-columns: 1fr;
+    }
+
+    .buysell p {
+        font-size: 2rem;
+    }
+
+    .feature_content {
+        flex-direction: column;
+    }
+
+    .buy_sell_box {
+        flex-direction: column;
+    }
+
+    .sign_up h6 {
+        font-size: 3rem;
+    }
+
+    .footer_link {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    header {
+        flex-direction: row;
+    }
+
+    .hero_content {
+        width: 80%;
+    }
+
+    .hero_box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .buysell p {
+        font-size: 2.5rem;
+    }
+
+    .feature_content {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .buy_sell_box {
+        flex-direction: row;
+    }
+
+    .sign_up h6 {
+        font-size: 5rem;
+    }
+
+    .footer_link {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 992px) {
+    header {
+        flex-direction: row;
+    }
+
+    .hero_content {
+        width: 70%;
+    }
+
+    .hero_box {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .buysell p {
+        font-size: 3rem;
+    }
+
+    .feature_content {
+        flex-direction: row;
+    }
+
+    .buy_sell_box {
+        flex-direction: row;
+    }
+
+    .sign_up h6 {
+        font-size: 7rem;
+    }
+
+    .footer_link {
+        flex-direction: row;
+    }
+}
